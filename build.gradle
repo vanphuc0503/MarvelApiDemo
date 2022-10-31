@@ -1,0 +1,135 @@
+buildscript {
+    ext {
+        // Fragment Ktx
+        fragment_ktx = "androidx.fragment:fragment-ktx:1.4.1"
+
+        // Hilt
+        hilt_version = '2.42'
+        hilt_lib = "com.google.dagger:hilt-android:$hilt_version"
+        hilt_android_compiler = "com.google.dagger:hilt-compiler:$hilt_version"
+
+        // Dependencies
+        appcompat = "androidx.appcompat:appcompat:1.4.2"
+        ktx = "androidx.core:core-ktx:1.8.0"
+        constraint_layout = "androidx.constraintlayout:constraintlayout:2.1.4"
+
+        // Retrofit
+
+        retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
+        gson_converter = "com.squareup.retrofit2:converter-gson:2.9.0"
+        gson = "com.google.code.gson:gson:2.9.0"
+
+        // Logging
+        logging_interceptor = "com.squareup.okhttp3:logging-interceptor:4.9.3"
+
+        // Google Architecture Components
+        lifecycle_version = '2.5.0-rc01'
+        view_model = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+        live_data = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+        // Coroutines
+        coroutines_version = '1.6.2'
+        coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+        coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+        coroutines_test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+        coroutines_guava = "org.jetbrains.kotlinx:kotlinx-coroutines-guava:$coroutines_version"
+
+        // Navigation Components
+        nav_version = '2.4.2'
+        navigation_fragment = "androidx.navigation:navigation-fragment-ktx:$nav_version"
+        navigation_ui = "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+        //Firebase
+        firebase_bom = "com.google.firebase:firebase-bom:30.1.0"
+        firebase_messaging = 'com.google.firebase:firebase-messaging-ktx'
+        firebase_analytics = 'com.google.firebase:firebase-analytics-ktx'
+        firebase_crashlytics = 'com.google.firebase:firebase-crashlytics-ktx'
+
+        //Room
+        room_version = '2.4.2'
+        room_runtime = "androidx.room:room-runtime:$room_version"
+        room_compiler = "androidx.room:room-compiler:$room_version"
+        room_ktx = "androidx.room:room-ktx:$room_version"
+
+        //DataStore
+        data_store_version = "1.0.0"
+        data_store_preferences = "androidx.datastore:datastore-preferences:$data_store_version"
+
+        //Test
+        assertJ = "org.assertj:assertj-core:3.22.0"
+        mockk_version = '1.12.5'
+        mockk = "io.mockk:mockk:$mockk_version"
+        mockkAndroid = "io.mockk:mockk-android:$mockk_version"
+        mockWebServer = "com.squareup.okhttp3:mockwebserver:4.9.0"
+
+        //Test android app
+        espresso_core_version = '3.4.0'
+        espresso_core = "androidx.test.espresso:espresso-core:$espresso_core_version"
+
+        mockito_core_version = '2.28.2'
+        mockito_core = "org.mockito:mockito-core:$mockito_core_version"
+        mockito_android_version = '2.24.5'
+        mockito_android = "org.mockito:mockito-android:$mockito_android_version"
+        core_testing_version = '2.1.0'
+        core_testing = "androidx.arch.core:core-testing:$core_testing_version"
+        material_design = "com.google.android.material:material:1.6.1"
+        swipe_to_refresh = "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+        test_core_version = '1.4.0'
+        test_core = "androidx.test:core-ktx:$test_core_version"
+
+        paging_version = "3.1.1"
+        paging = "androidx.paging:paging-runtime:$paging_version"
+
+        // Splash screen
+        splash_screen_version = '1.0.0-beta02'
+        splash_screen = "androidx.core:core-splashscreen:$splash_screen_version"
+
+        //gif image
+        lottie_version = "5.2.0"
+        lottie = "com.airbnb.android:lottie:$lottie_version"
+
+        //circle image
+        circle_image_version = "2.1.0"
+        circle_image = "de.hdodenhof:circleimageview:$circle_image_version"
+
+        //Glide
+        glide_version = "4.12.0"
+        glide = "com.github.bumptech.glide:glide:$glide_version"
+        glide_compiler = "com.github.bumptech.glide:compiler:$glide_version"
+
+        //google map
+        google_map_version = "18.1.0"
+        google_map = "com.google.android.gms:play-services-maps:$google_map_version"
+        google_place = "2.6.0"
+        google_place = "com.google.android.libraries.places:places:$google_place"
+
+        //Jsoup - Java library for working with real-world HTML
+        jsoup_version = "1.13.1"
+        jsoup = "org.jsoup:jsoup:$jsoup_version"
+
+        //Json test
+        json_version = "20220320"
+        json_test = "org.json:json:$json_version"
+
+        // CameraX dependencies (first release for video is: "1.1.0")
+        camerax_version = "1.1.0"
+        // The following line is optional, as the core library is included indirectly by camera-camera2
+        camera_core = "androidx.camera:camera-core:${camerax_version}"
+        camera_camera2 = "androidx.camera:camera-camera2:${camerax_version}"
+        camera_lifecycle = "androidx.camera:camera-lifecycle:${camerax_version}"
+        camera_video = "androidx.camera:camera-video:${camerax_version}"
+        camera_view = "androidx.camera:camera-view:${camerax_version}"
+    }
+}
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.2.1' apply false
+    id 'com.android.library' version '7.2.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
+    id("com.google.dagger.hilt.android") version "2.44" apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
